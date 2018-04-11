@@ -1,0 +1,9 @@
+{
+	"extends": ["xo", "xo-react"],
+	"root": true,
+	"env": {
+		"browser": true,
+		"node": true,
+		"jest": true
+	}
+}

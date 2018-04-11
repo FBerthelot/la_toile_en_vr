@@ -1,0 +1,349 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>La toile en VR</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<!--link rel="stylesheet" href="css/theme/black.css" id="theme"-->
+		<link rel="stylesheet" href="css/theme/devoxxfr.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-state="intro">
+					<h1>
+						Devoxx France 2018<br />
+						La toile en VR
+					</h1>
+					<p style="margin-top:22%">
+						Jonathan Barthelemy <a href="http://twitter.com/jonathanbarthlm">@jonathanbarthlm</a><br />
+						Florent Berthelot <a href="http://twitter.com/berthel350">@berthel350</a><br />
+					</p>
+				</section>
+
+				<section>
+					<h2>Avant de commencer</h2>
+					<p style="text-align: center; margin-top: 50px; font-size: 50px;">
+						La VR qu'est ce que c'est ?
+					</p>
+				</section>
+				<section data-state="images" align="center">
+					<h2>1995 - Virtual boy</h2>
+					<img data-src="./images/virtual-boy.jpg" width="60%" style="display:block;margin-left:auto;margin-right:auto;" />
+				</section>
+				<section data-state="images" align="center">
+					<h2>2007 - Google Street View</h2>
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!4v1523797599664!6m8!1m7!1sNQj4zarqGGk0wDXwTiVTSA!2m2!1d48.87848480350618!2d2.282873958496167!3f29.293329771178215!4f1.9484636068463033!5f0.7820865974627469"
+						width="600"
+						height="450"
+						frameborder="0"
+						style="border:0">
+					</iframe>
+				</section>
+				<section data-state="images" align="center">
+					<h2>2014 - Facebook</h2>
+					<img data-src="./images/oculus.jpg" width="60%" style="display:block;margin-left:auto;margin-right:auto;" />
+				</section>
+
+				<section>
+					<h2>LA VR, un nouvel enjeu</h2>
+					<img data-src="./images/history-vr.png" width="60%" style="display:block;margin: 50px auto 0 auto;" />
+				</section>
+
+				<section align="center">
+					<h2>Que faut-il pour une expérience VR immersive ?</h2>
+				</section>
+
+				<section data-transition="none" align="center">
+					<h2>Que faut-il pour une expérience VR immersive ?</h2>
+					<ul>
+						<li>Environnement 3D</li>
+					</ul>
+				</section>
+
+				<section data-transition="none" align="center">
+					<h2>Que faut-il pour une expérience VR immersive ?</h2>
+					<ul>
+						<li>Environnement 3D</li>
+						<li>Son en 3D</li>
+					</ul>
+				</section>
+
+				<section data-transition="none" align="center">
+					<h2>Que faut-il pour une expérience VR immersive ?</h2>
+					<ul>
+						<li>Environnement 3D</li>
+						<li>Son en 3D</li>
+						<li>Des intéractions</li>
+					</ul>
+				</section>
+
+				<section align="center">
+					<h2>La toile en 3D</h2>
+					<pre style="width: 40%;">
+						<code data-trim data-noescape>
+							&lt;canvas>&lt;/canvas>
+						</code>
+					</pre>
+				</section>
+
+				<section>
+					<h2>WebGL</h2>
+					<ul>
+						<li>Sorti le 3 mars 2011</li>
+						<li>API Javascript dédiée à la 3D</li>
+						<li>Utilise les éléments HTML5 canvas</li>
+						<li>+20 frameworks ont vu le jour par la suite</li>
+					</ul>
+				</section>
+
+				<section align="center">
+					<h2>Un cube avec WebGL</h2>
+					<iframe
+						src="../webgl"
+						width="600"
+						height="450"
+						frameborder="0"
+						style="border:0">
+					</iframe>
+				</section>
+
+				<section>
+					<img data-src="./images/too_complex.jpg" width="60%" style="display:block;margin: 50px auto 0 auto;" />
+				</section>
+
+				<section>
+					<h2>Three.JS !</h2>
+					<ul>
+						<li>Produit des scènes 3D</li>
+						<li>Simplifie les calculs matriciels</li>
+					</ul>
+				</section>
+
+				<section align="center">
+					<h2>Un cube avec Three.JS</h2>
+					<iframe
+						src="../threejs/index.html"
+						width="600"
+						height="450"
+						frameborder="0"
+						style="border:0">
+					</iframe>
+				</section>
+
+				<section>
+					<h2>Des intéractions</h2>
+					<ul>
+					</ul>
+				</section>
+
+				<section data-transition="none">
+					<h2>Des intéractions</h2>
+					<ul>
+						<li>Événements JS (accélération, orientation, ...)</li>
+					</ul>
+				</section>
+
+				<section data-transition="none">
+					<h2>Des intéractions</h2>
+					<ul>
+						<li>Événements JS (accélération, orientation, ...)</li>
+						<li>API Sensor</li>
+					</ul>
+				</section>
+
+				<section data-state="images" align="center">
+					<h2>Web VR API</h2>
+					<img data-src="./images/vr-devices.png" width="60%" style="display:block;margin-left:auto;margin-right:auto;" />
+				</section>
+
+				<section>
+					<img data-src="./images/too_complex.jpg" width="60%" style="display:block;margin: 50px auto 0 auto;" />
+				</section>
+
+				<section>
+					<h2>Des frameworks !</h2>
+				</section>
+
+				<section data-transition="none">
+					<h2>Des frameworks, orientés composants !</h2>
+					<ul>
+					</ul>
+				</section>
+
+				<section data-transition="none">
+					<h2>Des frameworks, orientés composants !</h2>
+					<ul>
+						<li>A-Frame</li>
+						<li>React-VR</li>
+					</ul>
+				</section>
+				<section>
+					<h2>React-VR</h2>
+					<p>Au départ React, un framework orientée composant</p>
+				</section>
+
+				<section>
+					<h2>React-VR</h2>
+					<p>... puis react-native, exit le html vive les composants mobiles</p>
+				</section>
+
+				<section>
+					<h2>React-VR</h2>
+					<p>Et enfin react-VR, les composants produisent du three.js + web VR API</p>
+				</section>
+
+				<section data-state="demo flash" align="center">
+					<h1>Démo de React VR</h1>
+				</section>
+
+				<section>
+					<h2>A-frame</h2>
+					<p>
+						Framework open-source dédié à la 3D, développé par Mozilla et sorti en 2015
+					</p>
+			</section>
+
+				<section>
+					<h2>A-Frame - Les avantages</h2>
+					<ul>
+						<li>Ne nécessite pas de connaissances profondes en Javascript pour démarrer</li>
+						<li>S’intègre avec n’importe quelle librairie ou framework, tout se passe côté HTML</li>
+					</ul>
+					<!-- <img data-src="images/duotone aframe.png" width="50%" style="display:block;margin-left:auto;margin-right:auto;" /> -->
+				</section>
+
+				<section>
+					<h2>Une première scène avec A-Frame</h2>
+					<img data-src="./images/code-aframe.png" width="40%" style="display:block;margin-left:auto;margin-right:auto;margin-top: 50px;" />
+					<img data-src="./images/rendu-aframe.png" width="40%" style="display:block;margin-left:auto;margin-right:auto;" />
+				</section>
+
+				<section data-state="demo flash" align="center">
+					<h1>Demo de A-Frame</h1>
+				</section>
+
+				<section>
+					<h2>Et le son ?</h2>
+				</section>
+
+				<section data-transition="none">
+					<h2>Et le son ?</h2>
+					<p>Web Audio API</p>
+				</section>
+
+				<section data-state="demo flash" align="center">
+					<h1>Démo sonore</h1>
+				</section>
+
+				<section data-state="demo flash" align="center">
+					<h1>Nous ne sommes pas des designers !</h1>
+				</section>
+
+				<section data-state="demo flash" align="center">
+					<h1>Et les intéractions ?</h1>
+				</section>
+
+				<section data-state="demo flash" align="center">
+					<h1>Les déplacements ?</h1>
+				</section>
+
+				<section data-state="demo flash" align="center">
+					<h1>Le debug</h1>
+				</section>
+
+				<section align="center">
+					<h2>Compatibilité WebVR API</h2>
+					<ul>
+						<li>Mozilla Firefox</li>
+						<li>Chrome derrière un flag</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Take Away</h2>
+					<ul>
+						<li>Uniformisation par le Web</li>
+					</ul>
+				</section>
+
+				<section data-transition="none">
+					<h2>Take Away</h2>
+					<ul>
+						<li>Uniformisation par le Web</li>
+						<li>Améliore le coté immersif d'un site web</li>
+					</ul>
+				</section>
+
+				<section data-transition="none">
+					<h2>Take Away</h2>
+					<ul>
+						<li>Uniformisation par le Web</li>
+						<li>Améliore le coté immersif d'un site web</li>
+						<li>Incompatible avec le SEO</li>
+					</ul>
+				</section>
+
+				<section data-transition="none">
+					<h2>Take Away</h2>
+					<ul>
+						<li>Uniformisation par le Web</li>
+						<li>Améliore le coté immersif d'un site web</li>
+						<li>Incompatible avec le SEO</li>
+						<li>Intégration avec un site existant difficile</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Merci !</h2>
+					<p>Et merci également à Samy Benyoub (le stagiaire) et Justine Gaudin (Design)</p>
+				</section>
+
+			</div>
+      <div class="footer">
+        <p>#DevoxxFR @berthel350 @jonathanbarthlm</p><img align="right" src="./images/logos_devoxx_france/logo-texte-devoxx-france-400.png" />
+      </div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+				center: false,
+				controls: false,
+				progress: true,
+                width: 1280,
+                height: 720,
+                slideNumber: true,
+                margin: 0.0,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
